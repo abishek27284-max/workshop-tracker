@@ -1,4 +1,5 @@
 app\workshop\desk\ToolItem.class
 app\workshop\desk\ToolCatalogRepository.class
+app\workshop\desk\SecurityConfig.class
 app\workshop\desk\ToolDeskController.class
 app\workshop\desk\WorkshopDeskApp.class
