@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Equipment Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <div>
+                <h1>Workshop Equipment Tracker</h1>
+                <p class="subtitle">Spring Boot REST API + HTML, CSS &amp; JavaScript</p>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-pill">Total: <span id="totalCount">0</span></div>
+                <div class="stat-pill in-stock">Available: <span id="availableCount">0</span></div>
+                <div class="stat-pill checked-out">Checked Out: <span id="borrowedCount">0</span></div>
+            </div>
+        </header>
+
+        <section class="card">
+            <h2 id="formHeading">Add New Equipment</h2>
+            <form id="toolForm" class="entry-form">
+                <input type="hidden" id="editItemId">
+                <div class="input-group">
+                    <label for="toolLabelInput">Equipment Name</label>
+                    <input type="text" id="toolLabelInput" placeholder="e.g., Cordless Impact Driver" required>
+                </div>
+                <div class="input-group">
+                    <label for="storageSpotInput">Storage Location</label>
+                    <input type="text" id="storageSpotInput" placeholder="e.g., Aisle B - Shelf 2" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Save Equipment</button>
+                    <button type="button" id="cancelEditBtn" class="btn btn-secondary hidden">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="list-header">
+                <h2>Equipment Inventory</h2>
+                <input type="search" id="searchInput" class="search-box" placeholder="Filter by name or location...">
+            </div>
+            <div id="catalogContainer" class="catalog-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
